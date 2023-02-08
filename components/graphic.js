@@ -1,30 +1,14 @@
 import calc from "../helper/calc.js"
+import radioDiv from "./radioDiv.js"
 
 const graphic = (company) => {
     // const profitable = 
-    const { radio } = company
-    const radioDiv = () => {
-        let inner = ''
-        if (radio) {
-            radio.forEach((i, index) => {
-                inner += `
-                <div class="first:pr-4">
-                <label >
-                <input class="radio-input" type="radio"
-                name=${company.name} value=${Object.values(i)} ${index == 0 && "checked"} >
-                ${Object.keys(i)}</label>
-                </div>
-                `
-            })
-        }
-        return inner
-    }
     
     return (`
     <div class="oneline flex items-center">
         <div class="title w-1/3">
-            <h1 class="text-2xl pb-1">${company.name}</h1>
-            <div class="options flex text-xs justify-start">${radioDiv()}</div>
+            <h1 class="text-2xl pb-1">${company.name.toUpperCase()}</h1>
+            <div class="options flex text-xs justify-start">${radioDiv(company)}</div>
         </div>
         <div class="logo">
             <img
