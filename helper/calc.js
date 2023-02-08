@@ -1,4 +1,5 @@
 
+let profitable = 0
 
 const calc = (arr) => {
 
@@ -7,17 +8,15 @@ const calc = (arr) => {
     let total
 
     if (arr.name === "scaleway") {
-        console.log(storageBlock.value)
         const free = 75
         const totalStorage = storageBlock.value > free ? (storageBlock.value - free) * arr.storagePrice : 0
-        const totalTransfer = transferBlock.value > free ? (transferBlock.value - free) * arr.transferPrice :0
+        const totalTransfer = transferBlock.value > free ? (transferBlock.value - free) * arr.transferPrice : 0
         total = totalStorage + totalTransfer
     } else {
         const totalStorage = storageBlock.value * arr.storagePrice
         const totalTransfer = transferBlock.value * arr.transferPrice
         total = totalStorage + totalTransfer
     }
-
 
     if (storageBlock.value == 0 && transferBlock.value == 0) {
         total = 0

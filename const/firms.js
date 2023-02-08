@@ -1,6 +1,4 @@
-import { objVal, objKey } from '../helper/objectMethods.js'
 import url from './urlImg.js'
-
 
 const firms = [
     {
