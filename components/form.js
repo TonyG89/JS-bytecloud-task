@@ -6,7 +6,7 @@ const form = (name) => {
     return `
     <form id=${name}
     oninput="level.value=flevel.valueAsNumber"
-    class="w-1/2 px-4 ${mobile("px-2")}">
+    class="w-1/2 px-4 ${mobile("px-2  ")}">
     <h2>
     <label>${capitalize(name)}: </label>
     <output name="level">100</output> gb
